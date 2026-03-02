@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basil Behanan | Portfolio</title>
+
+  <!-- AOS (scroll animations) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- FAVICON (optional - add later inside /images) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+
+  <!-- Google material icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Font Awesome (no kit key needed) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Typed.js -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+    integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <!-- jQuery (used by template navbar) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- SweetAlert (for contact form success message) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <div class="max-width">
+      <div class="logo">
+        <a href="#home">Basil<span> Behanan</span></a>
+      </div>
+
+      <ul class="menu">
+        <li><a href="#home" class="menu-btn">Home</a></li>
+        <li><a href="#about" class="menu-btn">About</a></li>
+        <li><a href="#experience" class="menu-btn">Experience</a></li>
+        <li><a href="#projects" class="menu-btn">Projects</a></li>
+        <li><a href="#skills" class="menu-btn">Skills</a></li>
+        <li><a href="#contact" class="menu-btn">Contact</a></li>
+      </ul>
+
+      <div class="menu-btn">
+        <i class="material-icons">menu</i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scroll to top button -->
+  <button id="btnScrollToTop" aria-label="Scroll to top">
+    <i class="material-icons">arrow_upward</i>
+  </button>
+
+  <!-- Home -->
+  <section class="home" id="home">
+    <div class="max-width">
+      <div class="home-content">
+        <div class="text-1" data-aos="fade-up">Hello, my name is</div>
+        <div class="text-2" data-aos="fade-up" data-aos-delay="100">Basil Behanan</div>
+        <div class="text-3" data-aos="fade-up" data-aos-delay="200">
+          I'm a <span class="typing"></span>
+        </div>
+
+        <div class="home-buttons" data-aos="fade-up" data-aos-delay="300">
+          <!-- TODO: upload your resume to the repo as Basil_Behanan_Resume.pdf -->
+          <a class="btn-primary" href="Basil_Behanan_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+
+          <!-- TODO: replace with your real links -->
+          <a class="btn-secondary" href="https://github.com/Basilbe" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a class="btn-secondary" href="https://www.linkedin.com/in/basil-behanan-6509b92ab/" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+
+        <div class="home-mini" data-aos="fade-up" data-aos-delay="350">
+          Melbourne / Victoria, Australia · Computer Science (Data Science) · Graduation: Jun 2026
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="max-width">
+      <h2 class="title" data-aos="fade-down">About Me</h2>
+
+      <div class="about-content">
+        <div class="column left" data-aos="fade-right">
+          <!-- TODO: Put your profile photo in /images and update filename if needed -->
+          <img src="images/profile.jpg" alt="Basil Behanan profile photo" />
+        </div>
+
+        <div class="column right" data-aos="fade-up">
+          <div class="text">
+            I'm Basil Behanan and I'm a <span class="typing-2"></span>
+          </div>
+
+          <p class="paragraph">
+            I’m a Computer Science student (majoring in Data Science) based in Victoria, Australia. I enjoy building
+            practical machine learning and computer vision systems—especially for sports analytics.
+            Recently, I worked as a Computer Vision & Sports Analytics Intern at Superstat, where I helped improve
+            player identification and jersey recognition pipelines, and I also led an analytics team at Redback Operations (Project Orion)
+            to standardize an AFL event annotation schema and workflow.
+          </p>
+
+          <!-- TODO: upload your resume as Basil_Behanan_Resume.pdf in the repo root -->
+          <a href="Basil_Behanan_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience" id="experience">
+    <div class="max-width">
+      <h2 class="title" data-aos="fade-down">Experience</h2>
+
+      <div class="card-grid">
+        <div class="card" data-aos="flip-left">
+          <div class="box">
+            <i class="fa-solid fa-video"></i>
+            <div class="text">Superstat — CV & Sports Analytics Intern</div>
+            <div class="meta">Richmond, VIC · Jul 2025 – Sep 2025</div>
+            <ul class="bullets">
+              <li>Annotated & validated <b>2,000+ AFL gameplay frames</b> using CVAT with compact bounding boxes and event tagging.</li>
+              <li>Supported a player classification approach using jersey color features; achieved ~<b>90% accuracy</b> across varied data.</li>
+              <li>Built/optimized jersey number recognition to <b>95%+ accuracy</b> for automated player identification.</li>
+              <li>Improved data structuring & feature tagging to speed up model training cycles.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" data-aos="flip-left">
+          <div class="box">
+            <i class="fa-solid fa-people-group"></i>
+            <div class="text">Redback Operations (Project Orion) — Team Lead</div>
+            <div class="meta">Burwood, VIC · Jul 2025 – Sep 2025</div>
+            <ul class="bullets">
+              <li>Led a <b>5-member</b> team delivering a scalable AFL annotation pipeline aligned with engineering teams.</li>
+              <li>Designed & delivered AFL rules/gameplay training; improved annotation consistency by <b>30%+</b>.</li>
+              <li>Standardized kick/mark/tackle definitions in an event glossary for <b>10,000+ frames</b>.</li>
+              <li>Collaborated cross-functionally to ensure datasets directly supported detection & tracking models.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" data-aos="flip-left">
+          <div class="box">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div class="text">Education — Deakin University</div>
+            <div class="meta">Bachelor of Computer Science (Data Science) · Graduation: Jun 2026</div>
+            <ul class="bullets">
+              <li>Certifications: Data Analysis with Python (freeCodeCamp), Intro to C++ (LCC Computer Education).</li>
+              <li>Interests: ML, computer vision, sports analytics, distributed systems, and building real projects.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <div class="max-width">
+      <h2 class="title" data-aos="fade-down">Projects</h2>
+
+      <div class="card-grid">
+        <div class="card" data-aos="flip-left">
+          <div class="box">
+            <i class="fa-solid fa-music"></i>
+            <div class="text">Distributed Music Recommendation System</div>
+            <div class="meta">Python · Spotify API · Collaborative + Content-based Filtering · MPI</div>
+
+            <p class="paragraph small">
+              Built a distributed recommendation engine that uses collaborative and content-based filtering to recommend tracks based on user
+              preferences. Audio features were collected and standardized (tempo, energy, danceability), and the pipeline was parallelized
+              using MPI to reduce overall execution time.
+            </p>
+
+            <ul class="bullets">
+              <li>Preprocessed playlist audio features and standardized key metrics for analysis.</li>
+              <li>Parallelized recommendation computation using MPI across multiple nodes.</li>
+              <li>Achieved a <b>38% reduction</b> in execution time through distribution.</li>
+            </ul>
+
+            <div class="project-links">
+              <!-- TODO: replace with your repo link -->
+              <a class="btn-secondary" href="https://github.com/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+              <!-- Optional: add demo link later -->
+              <a class="btn-secondary" href="#contact">
+                <i class="fa-regular fa-paper-plane"></i> Request Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Optional future project cards (keep structure, update later) -->
+        <div class="card" data-aos="flip-left">
+          <div class="box">
+            <i class="fa-solid fa-futbol"></i>
+            <div class="text">AFL Computer Vision Work (Internship + Team Lead)</div>
+            <div class="meta">CVAT · Roboflow · OpenCV · ML Pipelines</div>
+            <p class="paragraph small">
+              A collection of real-world work on sports analytics: annotation pipelines, event definitions, and data workflows supporting player
+              tracking and identification models.
+            </p>
+            <div class="project-links">
+              <a class="btn-secondary" href="#experience">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View Experience
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-aos="flip-left">
+          <div class="box">
+            <i class="fa-solid fa-code"></i>
+            <div class="text">More Projects Coming</div>
+            <div class="meta">I’ll keep adding as I ship more work</div>
+            <p class="paragraph small">
+              Next additions: computer vision experiments, data dashboards, and ML models with clear write-ups and results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <div class="max-width" data-aos="fade-down">
+      <h2 class="title" data-aos="fade-up">Skills</h2>
+
+      <div class="skills-content">
+        <div class="column left">
+          <div class="text">Tools I use to build ML & CV systems</div>
+
+          <p class="paragraph-2">
+            I’m strongest in Python-based data/ML work, and I’m comfortable taking projects from messy data and labeling to evaluation-ready
+            models. I also work with modern tooling for reproducible development and collaboration.
+          </p>
+
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">R</span>
+            <span class="tag">SQL</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">TensorFlow / Keras</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Git</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">CVAT</span>
+            <span class="tag">Roboflow</span>
+            <span class="tag">Google Cloud Storage</span>
+          </div>
+
+          <a href="#projects">See Projects</a>
+        </div>
+
+        <div class="column right skill-box">
+          <div class="skill-icon-grid">
+            <div class="skill-icon">
+              <i class="fa-brands fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="skill-icon">
+              <i class="fa-solid fa-database"></i>
+              <span>SQL</span>
+            </div>
+            <div class="skill-icon">
+              <i class="fa-solid fa-eye"></i>
+              <span>OpenCV</span>
+            </div>
+            <div class="skill-icon">
+              <i class="fa-solid fa-brain"></i>
+              <span>ML</span>
+            </div>
+            <div class="skill-icon">
+              <i class="fa-brands fa-docker"></i>
+              <span>Docker</span>
+            </div>
+            <div class="skill-icon">
+              <i class="fa-brands fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+            <div class="skill-icon">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Power BI</span>
+            </div>
+            <div class="skill-icon">
+              <i class="fa-solid fa-cloud"></i>
+              <span>Cloud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="max-width">
+      <h2 class="title" data-aos="fade-down">Contact</h2>
+
+      <div class="contact-content">
+        <div class="column left" data-aos="flip-left">
+          <div class="text">Let’s get in touch</div>
+          <p class="paragraph-3">
+            If you want to collaborate, chat about sports analytics, or discuss internships / opportunities, send me a message here.
+          </p>
+
+          <div class="icons">
+            <div class="row">
+              <i class="fas fa-user"></i>
+              <div class="info">
+                <div class="head">Name</div>
+                <div class="sub-title">Basil Behanan</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="info">
+                <div class="head">Location</div>
+                <div class="sub-title">Victoria, Australia</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <i class="fas fa-envelope"></i>
+              <div class="info">
+                <div class="head">Email</div>
+                <div class="sub-title">
+                  <a class="link" href="mailto:basilbehanan5@gmail.com">basilbehanan5@gmail.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column right" data-aos="flip-right">
+          <div class="text">Message Me</div>
+
+          <form id="contactForm">
+            <div class="fields">
+              <div class="field name">
+                <input type="text" id="fromName" placeholder="Name" required autocomplete="off" />
+              </div>
+              <div class="field email">
+                <input type="email" id="emailSender" placeholder="Email" required autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="field">
+              <input type="text" id="subjectSender" placeholder="Subject" required autocomplete="off" />
+            </div>
+
+            <div class="field textarea">
+              <textarea cols="30" rows="10" id="message" placeholder="Message" required autocomplete="off"></textarea>
+            </div>
+
+            <div class="button">
+              <button type="submit">Send Message</button>
+            </div>
+
+            <div class="contact-note">
+              This uses your email app (mailto). If it doesn’t open, email me directly at
+              <a class="link" href="mailto:basilbehanan5@gmail.com">basilbehanan5@gmail.com</a>.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="text-center">
+      <span>
+        Created by <a href="#home">Basil Behanan</a> |
+        <span class="far fa-copyright"></span>
+        <script>document.write(new Date().getFullYear())</script>
+        All rights reserved.
+        <div class="footer-icons">
+          <!-- TODO: replace with your real links -->
+          <a href="https://www.linkedin.com/in/basil-behanan-6509b92ab/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Basilbe" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </span>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+  <script>
+    // Scroll progress bar
+    window.onscroll = function () { myFunction(); };
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ easing: "ease-in", delay: 100, duration: 300, offset: 100 });
+    window.addEventListener("load", AOS.refresh);
+  </script>
+</body>
+</html>
