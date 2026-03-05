@@ -18,8 +18,8 @@ $(document).ready(function () {
   new Typed(".typing", {
     strings: [
       "Data Science Student",
-      "Computer Vision Intern",
-      "Sports Analytics + CV",
+      "Computer Vision Engineer",
+      "Sports Analytics + CV Developer",
       "ML & Python Developer"
     ],
     typeSpeed: 80,
