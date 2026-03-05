@@ -31,7 +31,7 @@ $(document).ready(function () {
   new Typed(".typing-2", {
     strings: [
       "Data Science Student",
-      "Computer Vision Intern",
+      "Computer Vision Engineer",
       "Team Lead (Project Orion)",
       "ML & Python Developer"
     ],
